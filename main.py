@@ -21,7 +21,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://service-management-1-byjz.onrender.com/"],
+    allow_origins=["https://service-management-1-byjz.onrender.com"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
