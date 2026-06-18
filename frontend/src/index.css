@@ -1,0 +1,8 @@
+body {
+  background-color: #f5f6f8;
+}
+
+.status-badge {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
