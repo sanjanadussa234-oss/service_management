@@ -1,6 +1,6 @@
 // All backend communication lives in this one file.
 // Change BASE_URL to your deployed Render URL when you go live.
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://service-management-r0nv.onrender.com";
 
 function getToken() {
   return localStorage.getItem("token");
