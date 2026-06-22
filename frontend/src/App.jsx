@@ -248,6 +248,7 @@ function Dashboard({ role, onLogout }) {
                 <th>Title</th>
                 <th>Description</th>
                 <th>Status</th>
+                {(role === "admin" || role === "technician") && <th>Assigned To</th>}
                 {role === "admin" && <th>Assign technician</th>}
                 {(role === "admin" || role === "technician") && <th>Update status</th>}
               </tr>
@@ -259,6 +260,11 @@ function Dashboard({ role, onLogout }) {
                   <td>{r.title}</td>
                   <td>{r.description}</td>
                   <td><StatusBadge status={r.status} /></td>
+
+                  {(role === "admin" || role === "technician") && (
+                  <td>{r.assigned_to ?? <span className="text-muted">Unassigned</span>}</td>
+                  )}
+
 
                   {role === "admin" && (
                     <td>
